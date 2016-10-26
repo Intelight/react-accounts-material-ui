@@ -1,1 +1,1 @@
-# react-accounts-material-ui
+# react-accounts
