@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "start": "webpack -p --config --progress --watch",
+    "start": "webpack -p --config --progress --watch & npm run storybook",
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile",
     "test": "mocha --compilers js:babel-core/register \"src/**/*.spec.js\"",
