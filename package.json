@@ -63,6 +63,7 @@
     "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
+    "flexbox-react": "^4.0.2",
     "material-ui": "^0.16.1"
   }
 }
