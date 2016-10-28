@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/graphql-accounts/react-accounts-material-ui#readme",
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.5.2",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",

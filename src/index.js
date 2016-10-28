@@ -2,6 +2,7 @@ import React from 'react';
 import Accounts from 'graphql-accounts';
 import {
   Paper,
+  TextField,
 } from 'material-ui';
 import Flexbox from 'flexbox-react';
 
@@ -39,3 +40,39 @@ Wrapper.propTypes = {
 export { Wrapper };
 
 Accounts.ui.Wrapper = Wrapper;
+
+const LoginFields = () => (
+  <Flexbox flexDirection="column">
+    <TextField
+      fullWidth
+      name="user"
+      floatingLabelText="Username or email"
+    />
+    <TextField
+      fullWidth
+      name="password"
+      type="password"
+      hintText="Password"
+      floatingLabelText="Password"
+    />
+  </Flexbox>
+);
+
+const Fields = ({
+  formType,
+}) => { // eslint-disable-line consistent-return
+  switch (formType) {
+    case 'login':
+      return <LoginFields />;
+    default:
+      break;
+  }
+};
+
+Fields.propTypes = {
+  formType: React.PropTypes.string,
+};
+
+export { Fields };
+
+Accounts.ui.Fields = Fields;
