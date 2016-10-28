@@ -26,15 +26,22 @@ Accounts.ui.Title = Title;
 
 const Wrapper = ({
   children,
+  className,
+  style,
 }) =>
-  <Flexbox flexDirection="column" justifyContent="center">
-    <Paper style={styles.content}>
-      {children}
-    </Paper>
+  <Flexbox flexDirection="column" justifyContent="center" alignItems="center">
+    <div className={className} style={style}>
+      <Paper style={styles.content}>
+        {children}
+      </Paper>
+    </div>
   </Flexbox>;
+
 
 Wrapper.propTypes = {
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
+  style: React.PropTypes.object,
 };
 
 export { Wrapper };
@@ -71,6 +78,10 @@ const Fields = ({
 
 Fields.propTypes = {
   formType: React.PropTypes.string,
+};
+
+Fields.defaultProps = {
+  formType: 'login',
 };
 
 export { Fields };
